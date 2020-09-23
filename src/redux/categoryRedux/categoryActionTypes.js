@@ -1,0 +1,8 @@
+const categoryActionTypes = {
+    GET_ALL_CATEGORY_START: "GET_ALL_CATEGORY_START",
+    GET_ALL_CATEGORY_SUCCESS: "GET_ALL_CATEGORY_SUCCESS",
+    GET_ALL_CATEGORY_FAILURE: "GET_ALL_CATEGORY_FAILURE",
+  };
+  
+  export default categoryActionTypes;
+  

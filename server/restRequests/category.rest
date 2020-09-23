@@ -1,0 +1,30 @@
+###CREATE A CATEGORY
+POST http://localhost:5000/api/categories
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MDAzMjQ2ODF9.y5Nlyce2h4shXg1N8HwBQCXmRl3fQkVw3KSVQ0mucBM
+Content-Type: application/json
+
+{
+    "name":"work"
+}
+
+###UPDATE A CATEGORY
+PUT http://localhost:5000/api/categories/5f631a42b5be423a205d1135
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MDAzMjQ2ODF9.y5Nlyce2h4shXg1N8HwBQCXmRl3fQkVw3KSVQ0mucBM
+Content-Type: application/json
+
+{
+    "name":"catUpdated"
+}
+
+###DELETE A CATEGORY
+DELETE  http://localhost:5000/api/categories/5f631a42b5be423a205d1135
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MDAzMjQ2ODF9.y5Nlyce2h4shXg1N8HwBQCXmRl3fQkVw3KSVQ0mucBM
+
+### GET CATEGORY BY ID
+GET http://localhost:5000/api/categories/5f631a2bb5be423a205d1133
+
+### GET ALL CATEGORIES
+GET http://localhost:5000/api/categories
+
+###GET ALL POSTS OF A CATEGORY
+GET http://localhost:5000/api/categories/5f631a2bb5be423a205d1133/posts

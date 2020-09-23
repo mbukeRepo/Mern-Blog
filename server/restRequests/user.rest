@@ -1,0 +1,41 @@
+### REGISTER USER
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name":"user4",
+    "email":"user4@gmail.com",
+    "password":"123456"
+}
+
+###LOGIN USER
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"safak@gmail.com",
+    "password":"199221"
+}
+
+###UPDATE A USER
+PUT http://localhost:5000/api/users/5f6257716c7fe834843b5a2d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MDAzMjQ2ODF9.y5Nlyce2h4shXg1N8HwBQCXmRl3fQkVw3KSVQ0mucBM
+Content-Type: application/json
+
+{
+    "name":"user2",
+    "email":"user2@gmail.com"
+}
+
+###DELETE A USER
+DELETE  http://localhost:5000/api/users/5f62fe87e3713F6244474bf0d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJpYXQiOjE2MDAzMjQ0MDR9.GQJlXFfvs0B8eoRWn599RYYZmbED89TckxtmnRbrYQE
+
+### GET USER BY ID
+GET http://localhost:5000/api/users/5f6257416c7fe834843b5a2b
+
+### GET ALL USERS
+GET http://localhost:5000/api/users
+
+###GET ALL POSTS OF A USER
+GET http://localhost:5000/api/users/5f6257416c7fe834843b5a2b/posts

@@ -1,0 +1,34 @@
+###CREATE A POST
+POST http://localhost:5000/api/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJuYW1lIjoic2FmYWsiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MDA1MTU2NDZ9.02IVIAPqWeUfcJGoZuGHCFmB1nPNN7-fhrD3J-q21Fk
+Content-Type: application/json
+
+{
+    "title":"title221",
+    "desc":"desc1",
+    "photo":"Photo1",
+    "categories": ["life","sport"]
+}
+
+###UPDATE A POST
+PUT http://localhost:5000/api/posts/5f6313dffe9df45b00fefa34
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJuYW1lIjoic2FmYWsiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MDA1MTU0NjV9.EtV30QjvMqkB_LdfAqkNy5_Vnc0E5NQtZ1O1X6HJ5Uo
+Content-Type: application/json
+
+{
+    "title":"updatedtitle1",
+    "desc":"updateddesc1",
+    "photo":"updatedPhoto1",
+    "categoryId":"5f631a2bb5be423a205d1133",
+    "userId": "5f6257686c7fe834843b5a2c"
+}
+
+###DELETE A POST
+DELETE  http://localhost:5000/api/posts/5f625c58b579c25fb856bcb4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYyNTc0MTZjN2ZlODM0ODQzYjVhMmIiLCJuYW1lIjoic2FmYWsiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MDA1MTU0NjV9.EtV30QjvMqkB_LdfAqkNy5_Vnc0E5NQtZ1O1X6HJ5Uo
+
+###GET POST BY ID
+GET http://localhost:5000/api/posts/5f6313dffe9df45b00fefa34
+
+###GET ALL POSTS
+GET http://localhost:5000/api/posts

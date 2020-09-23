@@ -1,0 +1,80 @@
+.write {
+  padding-top: 100px;
+}
+.writeForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.writeFormGroup {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.writeFormGroupAddIcon {
+  font-size: 35px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: rgb(112, 107, 107);
+  cursor: pointer;
+}
+
+.writeInput {
+  font-size: 30px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+}
+
+.writeInput::placeholder {
+  color: rgb(189, 185, 185);
+  font-weight: 400;
+}
+
+.writeInput:focus {
+  outline-style: none;
+}
+
+.writeText {
+  border: none;
+  width: 70vw;
+  height: 100vh;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.writeText:focus {
+  outline-style: none;
+}
+
+.writeSubmitButton {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.writeSubmitButton:hover {
+  color: teal;
+  background-color: white;
+  border: teal 1px solid;
+}
+
+.writeSubmitButton:focus {
+  outline-style: none;
+}
+
+.writeSpine {
+  width: 20px;
+  margin-right: 5px;
+  color: white;
+}

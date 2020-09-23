@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  color: #222222;
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 999;
+}
+
+.headerLeft > .MuiSvgIcon-root {
+  font-size: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.headerCenter {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 900;
+  font-size: 11px;
+}
+
+.headerCenterList {
+  list-style-type: none;
+}
+
+.headerCenterListItem {
+  display: inline;
+  margin-left: 50px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.headerAvatar {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.headerSearchIcon {
+  font-size: 20px !important;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.headerMenuIcon {
+  font-size: 35px !important;
+  cursor: pointer;
+}

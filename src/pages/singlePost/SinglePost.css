@@ -1,0 +1,166 @@
+.singlePost {
+  display: flex;
+  padding-top: 60px;
+  margin-bottom: 50px;
+}
+
+.post {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 30px;
+}
+
+.post > img {
+  width: 70vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.postTitle {
+  text-align: center;
+  margin: 10px;
+  font-size: 24px;
+  font-family: "Lora", sans-serif;
+}
+
+.postTitleUpdate {
+  border: none;
+}
+
+.postTitleUpdate:focus {
+  outline-style: none;
+}
+
+.postIcons {
+  float: right;
+  color: lightcoral;
+}
+
+.postIcons > .MuiSvgIcon-root {
+  cursor: pointer;
+}
+
+.postIcons > .MuiSvgIcon-root:hover {
+  color: rgb(245, 97, 97);
+}
+
+.postDesc {
+  padding: 10px;
+  line-height: 25px;
+}
+
+.postDesc::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.postAuthorInfo {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #be9656;
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+}
+
+.postDescUpdate {
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.postDescUpdate:focus {
+  outline-style: none;
+}
+
+.postSure {
+  width: 250px;
+  height: 100px;
+  background-color: lightcoral;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.postSureButtons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postSureButton {
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  color: lightcoral;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.postSureButton:hover {
+  color: rgb(243, 104, 104);
+}
+
+.postSureButton:focus {
+  outline-style: none;
+}
+
+.postUpdateButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.postUpdateButton {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.postUpdateButton:focus {
+  outline-style: none;
+}
+
+.postUpdateButton.update {
+  background-color: teal;
+  display: flex;
+  align-items: center;
+}
+
+.postUpdateButton > .progress {
+  color: white;
+  margin-right: 5px;
+}
+
+.postUpdateList {
+  list-style-type: none;
+}
+
+.postUpdateListItem {
+  display: inline;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.postUpdateListItem:hover {
+  padding: 7px;
+}
+
+.postUpdateCategories {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

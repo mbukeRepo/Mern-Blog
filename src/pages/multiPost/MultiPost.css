@@ -1,0 +1,42 @@
+.container {
+  padding-top: 60px;
+}
+
+.writerSection {
+  margin: 20px 20px 0px 60px;
+  font-size: 20px;
+  color: #be9656;
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.writerSectionName{
+  margin-left: 10px;
+}
+
+.writerSection > img {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.multiPost {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.multiPostArea {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 30px;
+}
+
+.multiPostArea > img {
+  width: 70vw;
+  height: 30vh;
+  object-fit: cover;
+}

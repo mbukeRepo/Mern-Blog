@@ -1,0 +1,105 @@
+.account {
+  display: flex;
+  padding-top: 60px;
+}
+
+.accountArea {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px 10px 20px;
+}
+
+.accountTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accountTitleUpdate {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: lightcoral;
+}
+
+.accountTitleDelete {
+  color: red;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.accountForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountPP {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.accountPP > img {
+  height: 70px;
+  width: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.accountPPButton {
+  height: 25px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  color: white;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.accountPPButton:focus {
+  outline-style: none;
+}
+
+.accountForm > label {
+  font-size: 20px;
+}
+
+.accountPPInput {
+  width: 30%;
+}
+
+.accountForm > input {
+  color: gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.accountSubmitButton {
+  border: none;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  margin-top: 20px;
+  width: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accountSubmitButton:hover {
+  background-color: rgb(1, 114, 114);
+}
+
+.accountProgress {
+  color: white !important;
+  margin-right: 10px;
+}

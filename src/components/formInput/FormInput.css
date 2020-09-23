@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.formInput {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.formSmall {
+  font-size: 12px;
+}
+
+.formInput:focus {
+  outline-style: none;
+}
+
+.formAlert {
+  background-color: lightcoral;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+}
