@@ -59,11 +59,8 @@ export const RegisterAsync = (payload) => {
   return async (dispatch) => {
     dispatch(RegisterStart());
     try {
-      await Axios.post("http://localhost:5000/api/auth/register", payload).then(
-        (data) => {
-          dispatch(RegisterSuccess());
-        }
-      );
+      await Axios.post("http://localhost:5000/api/auth/register", payload)
+      dispatch(RegisterSuccess());
     } catch (err) {
       dispatch(RegisterFailure(err.response.data));
     }
@@ -74,11 +71,8 @@ export const LoginAsync = (payload) => {
   return async (dispatch) => {
     dispatch(LoginStart());
     try {
-      await Axios.post("http://localhost:5000/api/auth/login", payload).then(
-        (res) => {
-          dispatch(LoginSuccess(res.data));
-        }
-      );
+      const res = await Axios.post("http://localhost:5000/api/auth/login", payload)
+      dispatch(LoginSuccess(res.data));
     } catch (err) {
       dispatch(LoginFailure(err));
     }
