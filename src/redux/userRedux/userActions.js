@@ -59,9 +59,8 @@ export const GetUserByIdAsync = (id) => {
   return async (dispatch) => {
     dispatch(GetUserByIdStart());
     try {
-      await Axios.get(`http://localhost:5000/api/users/${id}`).then((res) => {
-        dispatch(GetUserByIdSuccess(res.data));
-      });
+      const res = await Axios.get(`http://localhost:5000/api/users/${id}`)
+      dispatch(GetUserByIdSuccess(res.data));
     } catch (err) {
       dispatch(GetUserByIdFailure(err.message));
     }
@@ -73,13 +72,12 @@ export const UpdateUserAsync = (id, token, user) => {
     dispatch(UpdateUserStart());
     try {
       const config = { headers: { Authorization: token } };
-      await Axios.put(
+      const res = await Axios.put(
         `http://localhost:5000/api/users/${id}`,
         user,
         config
-      ).then((res) => {
-        dispatch(UpdateUserSuccess(res.data));
-      });
+      )
+      dispatch(UpdateUserSuccess(res.data));
     } catch (err) {
       dispatch(UpdateUserFailure(err.message));
     }
@@ -91,13 +89,10 @@ export const DeleteUserAsync = (id, token) => {
     dispatch(DeleteUserStart());
     try {
       const config = { headers: { Authorization: token } };
-      await Axios.delete(`http://localhost:5000/api/users/${id}`, config).then(
-        (res) => {
-          dispatch(DeleteAllPostsOfAUserAsync(id, token));
-          dispatch(DeleteUserSuccess());
-          dispatch(Logout());
-        }
-      );
+      await Axios.delete(`http://localhost:5000/api/users/${id}`, config);
+      dispatch(DeleteAllPostsOfAUserAsync(id, token));
+      dispatch(DeleteUserSuccess());
+      dispatch(Logout());
     } catch (err) {
       dispatch(DeleteUserFailure(err.message));
     }
@@ -112,9 +107,8 @@ export const DeleteAllPostsOfAUserAsync = (id, token) => {
       await Axios.delete(
         `http://localhost:5000/api/users/${id}/posts`,
         config
-      ).then((res) => {
-        dispatch(DeleteAllPostsOfAUserSuccess());
-      });
+      )
+      dispatch(DeleteAllPostsOfAUserSuccess());
     } catch (err) {
       dispatch(DeleteAllPostsOfAUserFailure(err.message));
     }
