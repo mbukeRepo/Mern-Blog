@@ -19,9 +19,8 @@ export const GetAllCategoriesAsync = () => {
   return async (dispatch) => {
     dispatch(GetAllCategoriesStart());
     try {
-      await Axios.get("http://localhost:5000/api/categories").then((res) => {
-        dispatch(GetAllCategoriesSuccess(res.data));
-      });
+      const res = await Axios.get("http://localhost:5000/api/categories")
+      dispatch(GetAllCategoriesSuccess(res.data));
     } catch (err) {
       dispatch(GetAllCategoriesFailure(err.message));
     }
