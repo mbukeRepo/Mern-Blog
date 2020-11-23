@@ -86,9 +86,8 @@ export const GetPostByIdAsync = (id) => {
   return async (dispatch) => {
     dispatch(GetPostByIdStart());
     try {
-      await Axios.get(`http://localhost:5000/api/posts/${id}`).then((res) => {
-        dispatch(GetPostByIdSuccess(res.data));
-      });
+      const res = await Axios.get(`http://localhost:5000/api/posts/${id}`);
+      dispatch(GetPostByIdSuccess(res.data));
     } catch (err) {
       dispatch(GetPostByIdFailure(err.message));
     }
@@ -100,12 +99,9 @@ export const AddPostAsync = (post, token) => {
     dispatch(AddPostStart());
     try {
       const config = { headers: { Authorization: token } };
-      await Axios.post("http://localhost:5000/api/posts", post, config).then(
-        (res) => {
-          dispatch(AddPostSuccess());
-          window.location.href = "/";
-        }
-      );
+      const res =await Axios.post("http://localhost:5000/api/posts", post, config)
+      dispatch(AddPostSuccess());
+      window.location.href = "/";
     } catch (err) {
       dispatch(AddPostFailure(err.message));
     }
@@ -121,10 +117,9 @@ export const UpdatePostAsync = ({id, post, token}) => {
         `http://localhost:5000/api/posts/${id}`,
         post,
         config
-      ).then((res) => {
-        dispatch(UpdatePostSuccess(post));
-        window.location.href = "/";
-      });
+      )
+      dispatch(UpdatePostSuccess(post));
+      window.location.href = "/";
     } catch (err) {
       dispatch(UpdatePostFailure(err.message));
     }
@@ -136,12 +131,9 @@ export const DeletePostAsync = (id, token) => {
     dispatch(DeletePostStart());
     try {
       const config = { headers: { Authorization: token } };
-      await Axios.delete(`http://localhost:5000/api/posts/${id}`, config).then(
-        (res) => {
-          window.location.href = "/";
-          dispatch(DeletePostSuccess());
-        }
-      );
+      await Axios.delete(`http://localhost:5000/api/posts/${id}`, config)
+      window.location.href = "/";
+      dispatch(DeletePostSuccess());
     } catch (err) {
       dispatch(DeletePostFailure(err.message));
     }
